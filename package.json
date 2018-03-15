@@ -1,0 +1,16 @@
+{
+  "name": "dota2-band",
+  "version": "0.1.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aoisensi/dota2-band.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aoisensi/dota2-band/issues"
+  },
+  "homepage": "https://github.com/aoisensi/dota2-band#readme",
+  "private": true
+}
