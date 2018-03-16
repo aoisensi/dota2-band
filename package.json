@@ -12,5 +12,8 @@
     "url": "https://github.com/aoisensi/dota2-band/issues"
   },
   "homepage": "https://github.com/aoisensi/dota2-band#readme",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "gulp": "^4.0.0"
+  }
 }
