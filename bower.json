@@ -1,0 +1,21 @@
+{
+  "name": "dota2-band",
+  "description": "",
+  "main": "",
+  "authors": [
+    "aoisensi <aoisensi@outlook.jp>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/aoisensi/dota2-band",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#2.0.0"
+  }
+}
