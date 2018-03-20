@@ -1,20 +1,15 @@
 {
-  "name": "dota2-band",
-  "version": "0.1.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aoisensi/dota2-band.git"
+  "name": "polymer-starter-kit",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.0",
+    "eslint-plugin-html": "^2.0.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/aoisensi/dota2-band/issues"
-  },
-  "homepage": "https://github.com/aoisensi/dota2-band#readme",
-  "private": true,
-  "dependencies": {
-    "bower": "^1.8.2",
-    "gulp": "^4.0.0"
+  "scripts": {
+    "lint": "npm run lint:javascript && polymer lint",
+    "lint:javascript": "eslint . --ext js,html --ignore-path .gitignore",
+    "test": "polymer test",
+    "test:integration": "polymer build # test that psk builds without error with the CLI"
   }
 }
