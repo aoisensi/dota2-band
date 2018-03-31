@@ -2,11 +2,13 @@
   "library": [
     { 
       "id": "valve_dota_001",
-      "name": "Default Music Pack"
+      "name": "Default Music Pack",
+      "thumbnail": "/images/thumbnails/valve_dota_001.png"
     },
     { 
       "id": "valve_ti7",
-      "name": "The International 2017 Music Pack"
+      "name": "The International 2017 Music Pack",
+      "thumbnail": "/images/thumbnails/valve_ti7.png"
     }
   ]
 }

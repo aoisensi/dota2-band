@@ -21,6 +21,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
 <link rel="import" href="my-icons.html">
 
 <link rel="lazy-import" href="my-view1.html">
@@ -69,22 +70,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
 
-    <iron-ajax
-        auto
-        url="/data.json"
-        handle-as="json"
-        last-response="{{musicData}}"></iron-ajax>
+    <iron-ajax auto url="/data.json" handle-as="json" last-response="{{musicData}}"></iron-ajax>
 
-    <app-location
-        route="{{route}}"
-        url-space-regex="^[[rootPath]]">
+    <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
     </app-location>
 
-    <app-route
-        route="{{route}}"
-        pattern="[[rootPath]]:page"
-        data="{{routeData}}"
-        tail="{{subroute}}">
+    <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
     </app-route>
 
     <app-drawer-layout fullbleed narrow="{{narrow}}">
@@ -107,11 +98,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <div main-title>My App</div>
           </app-toolbar>
         </app-header>
-        <template is="dom-repeat" items="[[musicData.library]]">
-          <div>
-            <h2>[[item.name]]</h2>
-          </div>
-        </template>
+        <div class="library">
+          <template is="dom-repeat" items="[[musicData.library]]">
+            <paper-card image="[[item.thumbnail]]">
+              <div class="card-content">
+                [[item.name]]
+              </div>
+            </paper-card>
+          </template>
+        </div>
         <!--
         <iron-pages
             selected="[[page]]"
@@ -173,10 +168,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         // Load page import on demand. Show 404 page if fails
         const resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
         Polymer.importHref(
-            resolvedPageUrl,
-            null,
-            this._showPage404.bind(this),
-            true);
+          resolvedPageUrl,
+          null,
+          this._showPage404.bind(this),
+          true);
       }
 
       _showPage404() {
