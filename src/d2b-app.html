@@ -68,6 +68,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: black;
         font-weight: bold;
       }
+
+      .library {
+        padding: 8px;
+      }
+
+      .library > paper-card {
+        max-width: 320px;
+        margin: 8px;
+      }
     </style>
 
     <iron-ajax auto url="/data.json" handle-as="json" last-response="{{musicData}}"></iron-ajax>
