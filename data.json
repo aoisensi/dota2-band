@@ -9,6 +9,11 @@
       "id": "valve_ti7",
       "name": "The International 2017 Music Pack",
       "thumbnail": "/images/thumbnails/valve_ti7.png"
+    },
+    { 
+      "id": "valve_ti6",
+      "name": "The International 2016 Music Pack",
+      "thumbnail": "/images/thumbnails/valve_ti6.png"
     }
   ]
 }
